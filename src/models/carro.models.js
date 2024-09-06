@@ -12,7 +12,7 @@ export const getCarUniModel = async (id_carro) => {
     try{
         const pg = new PgConnection();
         // Hago consulta
-        return await pg.connection.query("SELECT * FROM CAR WHERE ID_CAR = $1" , [id_carro]);
+        return await pg.connection.query("SELECT * FROM CAR WHERE ID_CARRO = $1" , [id_carro]);
     }catch(error){
         return [];
     }
